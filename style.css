@@ -1,0 +1,100 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+
+section{
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+	background: rgba(0, 0, 0, 1.0);
+}
+
+.layer{
+	position: absolute;
+	border: none;
+	width: 12vw;
+	height: 250vh;
+	top: 50%;
+	left: 50%;
+	background: #fff;
+	box-shadow: inset -10px 0 40px rgba(0, 0, 0, 0.1), 
+	inset 10px 0 40px rgba(0, 0, 0, 1.0),
+	inset -10px 0 10px rgba(81, 81, 81, 0.25),
+	inset 10px 0 10px rgba(81, 81, 81, 0.25),
+	0 0 50px rgba(0, 0, 0, 1.0);
+	
+}
+
+.layer.layer1{
+	transform: translate(-50%,-50%) rotate(45deg);
+	background: #000 radial-gradient(green 9px, black 9px, black 13px, transparent);
+	background-size: 35px 35px;
+	animation: scrollpatternOpp 1.5s linear infinite;
+	z-index: 1;
+
+}
+
+
+.layer.layer2{
+	transform: translate(-50%,-42%) rotate(45deg);
+	background: #000 radial-gradient(orange 9px, black 9px, black 13px, transparent);
+	background-size: 35px 35px;
+	animation: scrollpattern 1.5s linear infinite;
+
+
+}
+
+.layer.layer3{
+	transform: translate(-50%,-58%) rotate(45deg);
+	background: #000 radial-gradient(pink 9px, black 9px, black 13px, transparent);
+	background-size: 35px 35px;
+	animation: scrollpattern 1.5s linear infinite;
+
+}
+
+.layer.layer4{
+	transform: translate(-50%,-42%) rotate(-45deg);
+	background: #000 radial-gradient(yellowgreen 9px, black 9px, black 13px, transparent);
+	background-size: 35px 35px;
+	animation: scrollpattern 1.5s linear infinite;
+
+}
+
+.layer.layer5{
+	transform: translate(-50%,-50%) rotate(-45deg);
+	background: #000 radial-gradient(firebrick 9px, black 9px, black 13px, transparent);
+	background-size: 35px 35px;
+	animation: scrollpatternOpp 1.5s linear infinite;
+	z-index: 2;
+
+}
+
+.layer.layer6{
+	transform: translate(-50%,-58%) rotate(-45deg);
+	background: #000 radial-gradient(blue 9px, black 9px, black 13px, transparent);
+	background-size: 35px 35px;
+	animation: scrollpattern 1.5s linear infinite;
+
+}
+
+@keyframes scrollpattern{
+	0%{
+		background-position: 0 0;
+	}
+	100%{
+		background-position: 35px -35px;
+	}
+}
+
+@keyframes scrollpatternOpp{
+	0%{
+		background-position: 0 0;
+	}
+	100%{
+		background-position: -35px 35px;
+	}
+}}
